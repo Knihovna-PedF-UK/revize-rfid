@@ -9,10 +9,12 @@ for line in io.lines() do
   -- pokud nemáme čárový kód, uložíme číslo řádku, abysme viděli, kolik kódů se nenačetlo
   local barcode = line:match("[^\t]+\t([^\t]+)") or "empty " .. i
   if barcode then
-    if not used[barcode] then
-      t[#t+1] = barcode
-    end
-    used[barcode] = true
+    -- if not used[barcode] then
+      -- t[#t+1] = barcode
+    -- end
+    -- used[barcode] = true
+    -- 
+    print(barcode .. "@studovna")
   end
   i = i + 1
 end
